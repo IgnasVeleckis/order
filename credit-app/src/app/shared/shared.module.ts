@@ -9,6 +9,9 @@ import { IconComponent } from './components/icon/icon.component';
   declarations: [ButtonComponent, IconComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [IconComponent, ButtonComponent]
 })
-export class SharedModule { }
+export class SharedModule {
+
+ }
