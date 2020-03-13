@@ -5,18 +5,20 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './layouts/main/main.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
-import { CreditComponent } from '../credit/containers/credit/credit.component';
 import { LandingComponent } from '../landing/containers/landing/landing.component';
-import { CreditHistoryComponent } from '../credit-history/containers/credit-history/credit-history.component';
+import { CreditModule } from '../credit/credit.module';
+import { CreditHistoryModule } from '../credit-history/credit-history.module';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, MainComponent, CreditComponent, LandingComponent, CreditHistoryComponent],
+  declarations: [HeaderComponent, FooterComponent, MainComponent,  LandingComponent],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    CreditModule,
+    CreditHistoryModule
   ]
 })
 export class LayoutModule { }

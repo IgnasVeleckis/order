@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./credit.component.scss']
 })
 export class CreditComponent implements OnInit {
-
+  
   constructor() { }
-
+  formValue = 1;
   ngOnInit() {
   }
 

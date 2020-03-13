@@ -10,13 +10,14 @@ import { CreditHistoryComponent } from './credit-history/containers/credit-histo
 
 const routes: Routes = [
   {
+    path: 'welcome',
+    component: LandingComponent
+  },
+  {
     path: "",
     component: MainComponent,
     children: [
-      {
-        path: '',
-        component: LandingComponent
-      },
+      
       {
         path: "credit",
         component: CreditComponent
@@ -27,6 +28,8 @@ const routes: Routes = [
       }
     ]
   }
+  
+
 ];
 
 @NgModule({
