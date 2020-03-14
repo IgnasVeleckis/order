@@ -10,16 +10,16 @@ import { CreditHistoryComponent } from './credit-history/containers/credit-histo
 
 const routes: Routes = [
   {
-    path: 'welcome',
+    path: '',
     component: LandingComponent
   },
   {
-    path: "",
+    path: "credit",
     component: MainComponent,
     children: [
       
       {
-        path: "credit",
+        path: "get",
         component: CreditComponent
       },
       {

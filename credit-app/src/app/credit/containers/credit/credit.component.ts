@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-credit',
   templateUrl: './credit.component.html',
   styleUrls: ['./credit.component.scss']
 })
-export class CreditComponent implements OnInit {
-  
+export class CreditComponent  {
+
   constructor() { }
-  formValue = 1;
-  ngOnInit() {
+  formValue: string = '1';
+
+  change(event){
+    this.formValue = event;
   }
+
 
 }

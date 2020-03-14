@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-step-one',
   templateUrl: './step-one.component.html',
   styleUrls: ['./step-one.component.scss']
 })
-export class StepOneComponent implements OnInit {
-
+export class StepOneComponent{
+  @Output() formValue = new EventEmitter<string>()
   constructor() { }
 
-  ngOnInit() {
+  
+  changeValue() {
+    this.formValue.emit('2')
+    
   }
-
+  
+  
 }

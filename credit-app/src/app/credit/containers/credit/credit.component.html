@@ -1,4 +1,5 @@
 <div class="credit">
-    <app-step-one *ngIf="formValue === 1"></app-step-one>
-    <app-step-two *ngIf="formValue === 2"></app-step-two>
+    <app-step-one *ngIf="formValue == 1" (formValue)="change($event)"></app-step-one>
+    <app-step-two *ngIf="formValue == 2"></app-step-two>
+
 </div>

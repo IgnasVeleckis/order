@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-step-two',
   templateUrl: './step-two.component.html',
   styleUrls: ['./step-two.component.scss']
 })
-export class StepTwoComponent implements OnInit {
-
+export class StepTwoComponent {
   constructor() { }
 
-  ngOnInit() {
-  }
+
 
 }
