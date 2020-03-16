@@ -5,6 +5,7 @@ import { StepTwoComponent } from './components/step-two/step-two.component';
 import { CreditComponent } from './containers/credit/credit.component';
 import { SharedModule } from '../shared/shared.module';
 import { StepThreeComponent } from './components/step-three/step-three.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,8 @@ import { StepThreeComponent } from './components/step-three/step-three.component
   declarations: [StepOneComponent, StepTwoComponent, CreditComponent, StepThreeComponent],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class CreditModule { }

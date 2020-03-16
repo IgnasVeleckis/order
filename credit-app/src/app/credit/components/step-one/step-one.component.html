@@ -1,7 +1,15 @@
 <div class="step-one">
     <h1>First</h1>
-    <div class="buttons">
-
-        <app-button (click)="changeValue()" text="NEXT"></app-button>
+    <div class="form">
+        <form [formGroup]="firstForm" class="flex direction-column" (ngSubmit)="firstFormSubmit()">
+            <label>
+                <app-input title="First name" type="text"></app-input>
+            </label>
+            <label>
+                <app-input title="Last name" type="text"></app-input>
+            </label>
+            <button type="submit" [disabled]="!firstForm.valid">NEXT</button>
+        </form>
     </div>
+
 </div>
