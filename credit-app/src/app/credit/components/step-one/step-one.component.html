@@ -1,15 +1,46 @@
-<div class="step-one">
-    <h1>First</h1>
-    <div class="form">
-        <form [formGroup]="firstForm" class="flex direction-column" (ngSubmit)="firstFormSubmit()">
-            <label>
-                <app-input title="First name" type="text"></app-input>
-            </label>
-            <label>
-                <app-input title="Last name" type="text"></app-input>
-            </label>
+<div class="step-one mb-5 mt-5">
+    <h1>Creditors information</h1>
+
+    <form [formGroup]="firstForm" class="flex direction-column" (ngSubmit)="firstFormSubmit()">
+        <p>First name</p>
+        <input type="text" formControlName="firstName" class="p-2">
+        <p>Last name</p>
+        <input type="text" formControlName="lastName" class="p-2">
+        <p>Email</p>
+        <input type="text" formControlName="email" class="p-2">
+        <p>Phone</p>
+        <div class="phone flex">
+            <select id="phone">
+                <option value="+370" selected>+370</option>
+                <option value="{{option}}" *ngFor="let option of phoneSelectOptions">{{option}}</option>
+            </select>
+
+            <input type="number" formControlName="phone" class="p-2">
+        </div>
+        <p>Address:</p>
+        <div class="address flex direction-column ml-3" formGroupName="address">
+            <p>City</p>
+            <input type="text" formControlName="city" class="p-2">
+            <p>Street</p>
+            <input type="text" formControlName="street" class="p-2">
+            <p>House</p>
+            <input type="text" formControlName="house" class="p-2">
+            <p>Flat</p>
+            <input type="text" formControlName="flat" class="p-2">
+            <p>Zip code</p>
+            <input type="number" formControlName="zip" class="p-2">
+
+        </div>
+        <div class="buttons flex justify-center mt-3">
             <button type="submit" [disabled]="!firstForm.valid">NEXT</button>
-        </form>
-    </div>
+
+        </div>
+    </form>
+    <p>
+        form value: {{firstForm.value}}
+    </p>
+    <p>
+        form status: {{firstForm.status}}
+    </p>
 
 </div>

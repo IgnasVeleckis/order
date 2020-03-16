@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -11,11 +11,27 @@ export class StepOneComponent{
   @Output() formValue = new EventEmitter<string>()
   constructor() { }
 
-  manoForma = new FormControl('');
+  phoneSelectOptions = [
+    
+    '+440',
+    '+123',
+    '+321',
+    '+000'
+  ]
+
 
   firstForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    phone: new FormControl('', Validators.required),
+    address: new FormGroup({
+      city: new FormControl('', Validators.required),
+      street: new FormControl('', Validators.required),
+      house: new FormControl('', Validators.required),
+      flat: new FormControl('', Validators.required),
+      zip: new FormControl('', Validators.required)
+    })
   })
   
   changeValue() {
@@ -25,6 +41,10 @@ export class StepOneComponent{
   firstFormSubmit() {
     console.log(this.firstForm.value);
     this.changeValue()
+  }
+
+  onSubmit(){
+    console.log('la')
   }
   
   

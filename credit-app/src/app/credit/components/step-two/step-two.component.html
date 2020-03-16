@@ -1,10 +1,24 @@
-<div class="step-two">
-    <h1>Second</h1>
-    <div class="form">
+<div class="step-two mt-5">
+    <h1>Credit information</h1>
 
-    </div>
-    <div class="buttons">
-        <app-button (click)="back()" text="BACK"></app-button>
-        <app-button (click)="changeValue()" text="NEXT"></app-button>
-    </div>
+    <form [formGroup]="secondForm" class="flex direction-column" (ngSubmit)="secondFormSubmit()">
+        <div class="input mt-2">
+            <p>Credit size(from 300e)</p>
+            <input type="number" formControlName="creditSize" class="p-2">
+        </div>
+        <div class="input mt-2">
+            <p>Credit duration (months up to 120)</p>
+            <input type="number" formControlName="creditDuration" class="p-2">
+        </div>
+        <div class="input mt-2">
+            <p>Credit payment day(1-25)</p>
+            <input type="number" formControlName="creditPaymentDay" class="p-2">
+        </div>
+        <div class="buttons flex justify-around mt-3">
+            <button (click)="back()">BACK</button>
+            <button type="submit" [disabled]="!secondForm.valid">NEXT</button>
+        </div>
+    </form>
+
+
 </div>

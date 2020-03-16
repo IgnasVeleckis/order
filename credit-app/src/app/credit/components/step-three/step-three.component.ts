@@ -8,7 +8,7 @@ import { Component,  Output, EventEmitter } from '@angular/core';
 export class StepThreeComponent {
   @Output() formValue = new EventEmitter<string>()
   constructor() { }
-
+  placeholder = 'Lorem ipsum'
 
   back(){
     this.formValue.emit('2')
