@@ -218,3 +218,17 @@
 .round {
     border-radius: 90px;
 }
+
+// Validation
+.is-invalid {
+    border: 2px solid red;
+}
+
+// Display
+.hidden {
+    display: none;
+}
+
+.display {
+    display: flex;
+}
