@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { StepOne } from '../../../../core/models/step-one.interface'
 
 
 @Component({
@@ -33,8 +34,7 @@ export class StepOneComponent{
   })
   
   changeValue() {
-    this.formValue.emit('2')
-    
+    this.formValue.emit('2')  
     this.gettingFormValues()
   }
 
@@ -46,7 +46,6 @@ export class StepOneComponent{
   gettingFormValues(){
     this.firstName = this.firstForm.get('firstName').value
     this.lastName = this.firstForm.get('lastName').value
-    
   }
 
 }
