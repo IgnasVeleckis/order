@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./step-two.component.scss']
 })
 export class StepTwoComponent {
+
+ 
   @Output() formValue = new EventEmitter<string>()
   constructor() { }
 
@@ -27,5 +29,6 @@ export class StepTwoComponent {
     console.log(this.secondForm.value);
     this.changeValue()
   }
+
 
 }

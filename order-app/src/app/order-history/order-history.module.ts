@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreditHistoryComponent } from './containers/credit-history/credit-history.component';
 import { TableComponent } from './components/table/table.component';
 import { TitleComponent } from './components/title/title.component';
+import { OrderHistoryComponent } from './containers/order-history/order-history.component';
 
 
 
 @NgModule({
-  declarations: [CreditHistoryComponent, TableComponent, TitleComponent],
+  declarations: [TableComponent, TitleComponent, OrderHistoryComponent],
   imports: [
     CommonModule
   ]
 })
-export class CreditHistoryModule { }
+export class OrderHistoryModule { }

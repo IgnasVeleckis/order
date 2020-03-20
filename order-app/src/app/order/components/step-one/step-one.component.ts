@@ -1,14 +1,12 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { StepOne } from '../../../../core/models/step-one.interface'
-
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-step-one',
   templateUrl: './step-one.component.html',
   styleUrls: ['./step-one.component.scss']
 })
-export class StepOneComponent{
+export class StepOneComponent {
   @Output() formValue = new EventEmitter<string>()
   constructor() { }
   firstName: string;
@@ -21,7 +19,7 @@ export class StepOneComponent{
   ]
 
 
-  firstForm = new FormGroup({
+/*   firstForm = new FormGroup({
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -31,6 +29,17 @@ export class StepOneComponent{
     house: new FormControl('', Validators.required),
     flat: new FormControl('', Validators.required),
     zip: new FormControl('', Validators.required)
+  }) */
+  firstForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl(''),
+    phone: new FormControl(''),
+    city: new FormControl(''),
+    street: new FormControl(''),
+    house: new FormControl(''),
+    flat: new FormControl(''),
+    zip: new FormControl('')
   })
   
   changeValue() {

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './layout/layouts/main/main.component';
-import { CreditComponent } from './credit/containers/credit/credit.component';
 import { LandingComponent } from './landing/containers/landing/landing.component';
-import { CreditHistoryComponent } from './credit-history/containers/credit-history/credit-history.component';
+import { OrderComponent } from './order/containers/order/order.component';
+import { OrderHistoryComponent } from './order-history/containers/order-history/order-history.component';
 
 
 
@@ -20,11 +20,11 @@ const routes: Routes = [
       
       {
         path: "form",
-        component: CreditComponent
+        component: OrderComponent
       },
       {
         path: "order-history",
-        component: CreditHistoryComponent
+        component: OrderHistoryComponent
       }
     ]
   }

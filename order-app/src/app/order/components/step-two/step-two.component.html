@@ -1,10 +1,16 @@
 <div class="step-two mt-5">
-    <h1>Credit information</h1>
+    <h1>Order information</h1>
 
     <form [formGroup]="secondForm" class="flex direction-column" (ngSubmit)="secondFormSubmit()">
         <div class="input mt-2">
             <p>Credit size(from 300e)</p>
-            <input type="number" formControlName="creditSize" class="p-2">
+            <!-- <input type="number" formControlName="creditSize" class="p-2"> -->
+            <select class="p-2">
+                <option value="Hammer">Hammer</option>
+                <option value="ball">Ball</option>
+                <option value="plate">Plate</option>
+                <option value="fork">Fork</option>
+            </select>
         </div>
         <div class="input mt-2">
             <p>Credit duration (months up to 120)</p>
