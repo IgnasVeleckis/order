@@ -14,16 +14,16 @@ const routes: Routes = [
     component: LandingComponent
   },
   {
-    path: "credit",
+    path: "order",
     component: MainComponent,
     children: [
       
       {
-        path: "get",
+        path: "form",
         component: CreditComponent
       },
       {
-        path: "credit-history",
+        path: "order-history",
         component: CreditHistoryComponent
       }
     ]

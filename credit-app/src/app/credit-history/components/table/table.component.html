@@ -1,19 +1,18 @@
 <div class="flex direction-column align-center mt-5">
     <table>
         <tr class="header">
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Size</th>
-            <th>Payment day</th>
-            <th>Duration</th>
+            <th>Customer name</th>
+            <th>Product name</th>
+            <th>Price</th>
+            <th>Delivery date</th>
         </tr>
         <tr class="history-unit" *ngFor="let row of tableData" (click)="alert(row)">
-            <td>John</td>
+            <td>{{row.firstName }} {{row.lastName}}</td>
             <!-- name and lastname form landing if registred and if not then credit form-->
-            <td>Doe</td>
-            <td>{{row.creditSize}}</td>
-            <td>{{row.creditPayday}}</td>
-            <td>{{row.creditDuration}}</td>
+
+            <td>{{row.productName}}</td>
+            <td>{{row.productPrice}} eur</td>
+            <td>{{row.deliveryDate}}</td>
         </tr>
     </table>
 

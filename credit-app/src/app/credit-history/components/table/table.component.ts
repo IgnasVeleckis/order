@@ -10,37 +10,37 @@ export class TableComponent implements OnInit {
     {
       firstName: 'John',
       lastName: 'Doe',
-      creditSize: 10000,
-      creditPayday: 15,
-      creditDuration: 24
+      productName: 'Ball',
+      productPrice: 15,
+      deliveryDate: '2020.11.03'
     },
     {
-      firstName: 'Jim',
-      lastName: 'Halpert',
-      creditSize: 2000,
-      creditPayday: 10,
-      creditDuration: 12
+      firstName: 'John',
+      lastName: 'Doe',
+      productName: 'Knife',
+      productPrice: 10,
+      deliveryDate: '2020.10.23'
     },
     {
-      firstName: 'Dwight',
-      lastName: 'Schrute',
-      creditSize: 9000,
-      creditPayday: 20,
-      creditDuration: 24
+      firstName: 'John',
+      lastName: 'Doe',
+      productName: 'Fork',
+      productPrice: 20,
+      deliveryDate: '2020.08.15'
     },
     {
-      firstName: 'Angela',
-      lastName: 'Kinsey',
-      creditSize: 1500,
-      creditPayday: 5,
-      creditDuration: 36
+      firstName: 'John',
+      lastName: 'Doe',
+      productName: 'Plate',
+      productPrice: 5,
+      deliveryDate: '2020.11.01'
     },
     {
-      firstName: 'Kevin',
-      lastName: 'Malone',
-      creditSize: 5000,
-      creditPayday: 25,
-      creditDuration: 72
+      firstName: 'John',
+      lastName: 'Doe',
+      productName: 'Book',
+      productPrice: 25,
+      deliveryDate: '2020.07.08'
     },
   ]
   constructor() { }
