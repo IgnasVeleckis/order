@@ -6,11 +6,12 @@ import { StepThreeComponent } from './components/step-three/step-three.component
 import { OrderComponent } from './containers/order/order.component';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StepFourComponent } from './components/step-four/step-four.component';
 
 
 
 @NgModule({
-  declarations: [StepOneComponent, StepTwoComponent, StepThreeComponent, OrderComponent],
+  declarations: [StepOneComponent, StepTwoComponent, StepThreeComponent, OrderComponent, StepFourComponent],
   imports: [
     CommonModule,
     SharedModule,

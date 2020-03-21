@@ -1,5 +1,5 @@
 <div class="step-one mb-5 mt-5">
-    <h1>Creditors information</h1>
+    <h1>Buyer information</h1>
 
     <form [formGroup]="firstForm" class="flex direction-column" (ngSubmit)="firstFormSubmit()">
         <p>First name</p>
@@ -32,35 +32,11 @@
             This field must be filled
         </p>
 
-        <p>City</p>
-        <input type="text" formControlName="city" class="p-2">
-        <p class="error ml-2 hidden" [ngClass]="{'display' : firstForm.get('city').touched && firstForm.get('city').invalid}">
-            This field must be filled
-        </p>
 
-        <p>Street</p>
-        <input type="text" formControlName="street" class="p-2">
-        <p class="error ml-2 hidden" [ngClass]="{'display' : firstForm.get('street').touched && firstForm.get('street').invalid}">
-            This field must be filled
-        </p>
 
-        <p>House</p>
-        <input type="text" formControlName="house" class="p-2">
-        <p class="error ml-2 hidden" [ngClass]="{'display' : firstForm.get('house').touched && firstForm.get('house').invalid}">
-            This field must be filled
-        </p>
 
-        <p>Flat</p>
-        <input type="text" formControlName="flat" class="p-2">
-        <p class="error ml-2 hidden" [ngClass]="{'display' : firstForm.get('flat').touched && firstForm.get('flat').invalid}">
-            This field must be filled
-        </p>
 
-        <p>Zip code</p>
-        <input type="text" formControlName="zip" class="p-2">
-        <p class="error ml-2 hidden" [ngClass]="{'display' : firstForm.get('zip').touched && firstForm.get('zip').invalid}">
-            This field must be filled
-        </p>
+
 
         <div class="buttons flex justify-center mt-3">
             <button type="submit" [disabled]="!firstForm.valid">NEXT</button>

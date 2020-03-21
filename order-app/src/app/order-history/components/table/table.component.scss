@@ -1,38 +1,52 @@
 @import '../../../../theme/variables.scss';
-div {
-    table {
-        border-collapse: collapse;
-        th {
-            border: 1px solid rgb(207, 207, 207);
-            padding: .5rem;
+div.table {
+    border: 1px solid rgb(209, 209, 209);
+    .row {
+        transition: .3s;
+        background-color: rgb(245, 245, 245);
+        position: relative;
+        .cel {
+            width: 130px;
+            padding: 1rem .5rem;
+            border: 1px solid rgb(216, 210, 210);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        tr {
-            border: 1px solid rgb(207, 207, 207);
-            transition: .2s;
-            background-color: rgb(233, 233, 233);
-            &:nth-child(even) {
-                background-color: rgb(218, 218, 218);
-            }
-            &.history-unit {
-                cursor: pointer;
-                &:hover {
-                    background-color: rgb(143, 143, 143);
-                }
-            }
-            td {
-                width: 100px;
-                border: 1px solid rgb(207, 207, 207);
-                padding: 1rem .5rem;
-                text-align: center;
-                color: $color-primary;
+        .buttons {
+            &.hidden {
+                display: none;
             }
         }
     }
-    .buttons {
-        button {
-            margin: 1rem .5rem;
-            height: 30px;
-            width: 80px;
+    .tableTitle {
+        background-color: rgb(245, 152, 66);
+        .cel {
+            border: none;
+        }
+    }
+    .tableRow {
+        &:nth-child(even) {
+            background-color: rgb(212, 212, 212);
+        }
+        &:hover {
+            .buttons {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 576px;
+                padding: 1rem .5rem;
+                background-color: rgba(0, 0, 0, 0.7);
+                display: flex;
+                transition: .3s;
+                button {
+                    cursor: pointer;
+                    width: 70px;
+                    height: 20px;
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
         }
     }
 }

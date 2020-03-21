@@ -1,30 +1,32 @@
 <div class="step-two mt-5">
-    <h1>Order information</h1>
+    <h1>Delivery information</h1>
 
     <form [formGroup]="secondForm" class="flex direction-column" (ngSubmit)="secondFormSubmit()">
-        <div class="input mt-2">
-            <p>Credit size(from 300e)</p>
-            <!-- <input type="number" formControlName="creditSize" class="p-2"> -->
-            <select class="p-2">
-                <option value="Hammer">Hammer</option>
-                <option value="ball">Ball</option>
-                <option value="plate">Plate</option>
-                <option value="fork">Fork</option>
-            </select>
-        </div>
-        <div class="input mt-2">
-            <p>Credit duration (months up to 120)</p>
-            <input type="number" formControlName="creditDuration" class="p-2">
-        </div>
-        <div class="input mt-2">
-            <p>Credit payment day(1-25)</p>
-            <input type="number" formControlName="creditPaymentDay" class="p-2">
-        </div>
+
+        <p>City</p>
+        <input type="text" formControlName="city" class="p-2">
+        <p class="error ml-2 hidden" [ngClass]="{'display' : secondForm.get('city').touched && secondForm.get('city').invalid}">
+            This field must be filled
+        </p>
+        <p>Address</p>
+        <input type="text" formControlName="address" class="p-2">
+        <p class="error ml-2 hidden" [ngClass]="{'display' : secondForm.get('city').touched && secondForm.get('city').invalid}">
+            This field must be filled
+        </p>
+        <p>Zip code</p>
+        <input type="text" formControlName="zip" class="p-2">
+        <p class="error ml-2 hidden" [ngClass]="{'display' : secondForm.get('zip').touched && secondForm.get('zip').invalid}">
+            This field must be filled
+        </p>
         <div class="buttons flex justify-around mt-3">
             <button (click)="back()">BACK</button>
             <button type="submit" [disabled]="!secondForm.valid">NEXT</button>
         </div>
     </form>
+
+    <p>
+        form status: {{secondForm.status}}
+    </p>
 
 
 </div>

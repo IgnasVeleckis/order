@@ -1,46 +1,26 @@
-<div class="step-three mt-5">
-    <h1>Information</h1>
-    <div class="form">
-        <div class="firstNameWrapper flex">
-            First name:
-            <p class="firstName">{{placeholder}}</p>
+<div class="step-two mt-5">
+    <h1>Payment information</h1>
+    <form [formGroup]="thirdForm" class="flex direction-column" (ngSubmit)="thirdFormSubmit()">
+        <p>City</p>
+        <input type="text" formControlName="a" class="p-2">
+        <p class="error ml-2 hidden" [ngClass]="{'display' : thirdForm.get('a').touched && thirdForm.get('a').invalid}">
+            This field must be filled
+        </p>
+        <p>Address</p>
+        <input type="text" formControlName="b" class="p-2">
+        <p class="error ml-2 hidden" [ngClass]="{'display' : thirdForm.get('b').touched && thirdForm.get('b').invalid}">
+            This field must be filled
+        </p>
+        <p>Zip code</p>
+        <input type="text" formControlName="c" class="p-2">
+        <p class="error ml-2 hidden" [ngClass]="{'display' : thirdForm.get('c').touched && thirdForm.get('c').invalid}">
+            This field must be filled
+        </p>
+        <div class="buttons flex justify-around mt-3">
+            <button (click)="back()">BACK</button>
+            <button type="submit" [disabled]="!thirdForm.valid">NEXT</button>
         </div>
-        <div class="lastNameWrapper flex">
-            Last name:
-            <p class="lastName">{{placeholder}}</p>
-        </div>
-        <div class="emailWrapper flex">
-            Email:
-            <p class="email">{{placeholder}}</p>
-        </div>
-        <div class="phoneWrapper flex">
-            Phone:
-            <p class="phone">{{placeholder}}</p>
-        </div>
-        <div class="adressWrapper flex">
-            Adress:
-            <p class="adress">{{placeholder}}</p>
-        </div>
-        <div class="creditSizeWrapper flex">
-            Credit size:
-            <p class="creditSize">{{placeholder}}</p>
-        </div>
-        <div class="creditDurationWrapper flex">
-            Credit duration:
-            <p class="creditDuration">{{placeholder}}</p>
-        </div>
-        <div class="creditPaymentDayWrapper flex">
-            Credit duration:
-            <p class="creditPaymentDay">{{placeholder}}</p>
-        </div>
-        <div class="consent flex align-center mb-3">
-            <input type="radio">
-            <p>I accept lorem ipsum</p>
-        </div>
-    </div>
 
-    <div class="buttons flex justify-around mt-3">
-        <button (click)="back()">BACK</button>
-        <button type="submit">SUBMIT</button>
-    </div>
+    </form>
+
 </div>

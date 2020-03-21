@@ -53,4 +53,8 @@ export class TableComponent implements OnInit {
     console.log(msg)
   }
 
+  x(){
+    console.log('x')
+  }
+
 }

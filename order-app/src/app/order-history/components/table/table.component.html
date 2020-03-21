@@ -1,24 +1,26 @@
 <div class="flex direction-column align-center mt-5">
-    <table>
-        <tr class="header">
-            <th>Customer name</th>
-            <th>Product name</th>
-            <th>Price</th>
-            <th>Delivery date</th>
-        </tr>
-        <tr class="history-unit" *ngFor="let row of tableData" (click)="alert(row)">
-            <td>{{row.firstName }} {{row.lastName}}</td>
-            <!-- name and lastname form landing if registred and if not then credit form-->
 
-            <td>{{row.productName}}</td>
-            <td>{{row.productPrice}} eur</td>
-            <td>{{row.deliveryDate}}</td>
-        </tr>
-    </table>
 
-    <div class="buttons">
-        <button>DELETE</button>
-        <button>INFO</button>
+    <div class="table">
+        <div class="row flex tableTitle">
+            <div class="cel">Customer name</div>
+            <div class="cel">Product name</div>
+            <div class="cel">Price</div>
+            <div class="cel">Delivery date</div>
+        </div>
+        <div class="row flex tableRow" *ngFor="let row of tableData">
+            <div class="cel">{{row.firstName }} {{row.lastName}}</div>
+            <div class="cel">{{row.productName}}</div>
+            <div class="cel">{{row.productPrice}}</div>
+            <div class="cel">{{row.deliveryDate}}</div>
+            <div class="buttons flex justify-around hidden">
+                <button>DELETE</button>
+                <button (click)="alert(row)">INFO</button>
+            </div>
+        </div>
     </div>
+
+
+
 
 </div>

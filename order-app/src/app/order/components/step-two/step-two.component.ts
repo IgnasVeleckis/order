@@ -13,9 +13,9 @@ export class StepTwoComponent {
   constructor() { }
 
   secondForm = new FormGroup({
-    creditSize: new FormControl('', Validators.required),
-    creditDuration: new FormControl('', Validators.required),
-    creditPaymentDay: new FormControl('', Validators.required),
+    city: new FormControl('', Validators.required),
+    address: new FormControl('', Validators.required),
+    zip: new FormControl('', Validators.required),
   })
   back(){
     this.formValue.emit('1')
