@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./step-three.component.scss']
 })
 export class StepThreeComponent {
-  @Output() formValue = new EventEmitter<string>()
+  @Output() formVal = new EventEmitter<string>()
   constructor() { }
 
   thirdForm = new FormGroup({
@@ -16,11 +16,11 @@ export class StepThreeComponent {
     c: new FormControl('', Validators.required),
   })
   back(){
-    this.formValue.emit('2')
+    this.formVal.emit('2')
   }
 
   changeValue() {
-    this.formValue.emit('4')
+    this.formVal.emit('4')
   }
 
   thirdFormSubmit() {

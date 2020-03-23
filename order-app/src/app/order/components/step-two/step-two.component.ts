@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class StepTwoComponent {
 
  
-  @Output() formValue = new EventEmitter<string>()
+  @Output() formVal = new EventEmitter<string>()
   constructor() { }
 
   secondForm = new FormGroup({
@@ -18,11 +18,11 @@ export class StepTwoComponent {
     zip: new FormControl('', Validators.required),
   })
   back(){
-    this.formValue.emit('1')
+    this.formVal.emit('1')
   }
 
   changeValue() {
-    this.formValue.emit('3')
+    this.formVal.emit('3')
   }
 
   secondFormSubmit() {

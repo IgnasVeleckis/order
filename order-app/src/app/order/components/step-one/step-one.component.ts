@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./step-one.component.scss']
 })
 export class StepOneComponent {
-  @Output() formValue = new EventEmitter<string>()
+  @Output() formVal = new EventEmitter<string>()
   constructor() { }
   phoneSelectOptions = [
     '+440',
@@ -26,8 +26,7 @@ export class StepOneComponent {
 
   
   changeValue() {
-    this.formValue.emit('2')  
-    
+    this.formVal.emit('2')  
   }
 
   firstFormSubmit() {

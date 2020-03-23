@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-order',
@@ -12,6 +12,7 @@ export class OrderComponent{
   formValue: string = '1';
 
   change(event){
+    console.log(event)
     this.formValue = event;
   }
 
