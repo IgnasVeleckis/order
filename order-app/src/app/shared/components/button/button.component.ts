@@ -9,6 +9,7 @@ export class ButtonComponent {
   @Input() text: string;
   @Input() type: string;
   @Input() formControlName: string;
+  @Input() theme: string;
   constructor() { }
 
 

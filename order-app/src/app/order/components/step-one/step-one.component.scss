@@ -1,1 +1,18 @@
 @import '../../../../theme/variables.scss';
+.step-one {
+    form {
+        .error {
+            color: $secondary;
+            display: none;
+            &.display {
+                display: flex;
+                font-size: $font-xs;
+            }
+        }
+        input {
+            &.touched {
+                border-bottom: 2px solid $secondary;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../../../theme/variables.scss';
+.sidebar {
+    height: 80%;
+    width: 250px;
+    border: 1px solid red;
+    z-index: 9999;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    background-color: $secondary;
+    &.hidden {
+        left: -300px;
+    }
+}

@@ -1,36 +1,36 @@
-<div class="step-one mb-5 mt-5">
+<div class="step-one m-bottom-xl">
     <h1>Buyer information</h1>
 
     <form [formGroup]="firstForm" class="flex direction-column" (ngSubmit)="firstFormSubmit()">
-        <p>First name</p>
-        <input type="text" formControlName="firstName" class="p-2">
-        <p class="error ml-2 hidden" [ngClass]="{'display' : firstForm.get('firstName').touched && firstForm.get('firstName').invalid}">
+        <div class="m-top-xs">First name</div>
+        <input type="text" formControlName="firstName" [ngClass]="{'touched' : firstForm.get('firstName').touched && firstForm.get('firstName').invalid}">
+        <div class="error m-left-xs m-top-xs" [ngClass]="{'display' : firstForm.get('firstName').touched && firstForm.get('firstName').invalid}">
             This field must be filled
-        </p>
+        </div>
 
-        <p>Last name</p>
+        <div class="m-top-xs">Last name</div>
         <input type="text" formControlName="lastName" class="p-2">
-        <p class="error ml-2 hidden" [ngClass]="{'display' : firstForm.get('lastName').touched && firstForm.get('lastName').invalid}">
+        <div class="error m-left-xs m-y-xs" [ngClass]="{'display' : firstForm.get('lastName').touched && firstForm.get('lastName').invalid}">
             This field must be filled
-        </p>
+        </div>
 
-        <p>Email</p>
+        <div class="m-top-xs">Email</div>
         <input type="text" formControlName="email" class="p-2">
-        <p class="error ml-2 hidden" [ngClass]="{'display' : firstForm.get('email').touched && firstForm.get('email').invalid}">
+        <div class="error m-left-xs m-y-xs" [ngClass]="{'display' : firstForm.get('email').touched && firstForm.get('email').invalid}">
             This field must be filled
-        </p>
+        </div>
 
-        <p>Phone</p>
+        <div class="m-top-xs">Phone</div>
         <div class="phone flex">
             <select id="phone">
                 <option value="+370" selected>+370</option>
                 <option value="{{option}}" *ngFor="let option of phoneSelectOptions">{{option}}</option>
             </select>
-            <input type="number" formControlName="phone" [ngClass]="{'is-invalid' : firstForm.get('phone').touched && firstForm.get('phone').invalid}" class="p-2">
+            <input type="number" formControlName="phone">
         </div>
-        <p class="error ml-2 hidden" [ngClass]="{'display' : firstForm.get('phone').touched && firstForm.get('phone').invalid}">
+        <div class="error m-left-xs m-y-xs" [ngClass]="{'display' : firstForm.get('phone').touched && firstForm.get('phone').invalid}">
             This field must be filled
-        </p>
+        </div>
 
 
 
@@ -40,12 +40,11 @@
 
         <div class="buttons flex justify-center mt-3">
             <button type="submit" [disabled]="!firstForm.valid">NEXT</button>
-
         </div>
     </form>
 
-    <p>
+    <!-- <p>
         form status: {{firstForm.status}}
-    </p>
+    </p> -->
 
 </div>

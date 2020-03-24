@@ -38,6 +38,9 @@
         &-xs {
             margin-top: $xs;
         }
+        &-sm {
+            margin-top: $sm;
+        }
         &-md {
             margin-top: $md;
         }
@@ -54,6 +57,9 @@
     &-right {
         &-xs {
             margin-right: $xs;
+        }
+        &-sm {
+            margin-right: $sm;
         }
         &-md {
             margin-right: $md;
@@ -72,6 +78,9 @@
         &-xs {
             margin-bottom: $xs;
         }
+        &-sm {
+            margin-bottom: $sm;
+        }
         &-md {
             margin-bottom: $md;
         }
@@ -88,6 +97,9 @@
     &-left {
         &-xs {
             margin-left: $xs;
+        }
+        &-sm {
+            margin-left: $sm;
         }
         &-md {
             margin-left: $md;
@@ -106,6 +118,10 @@
         &-xs {
             margin-left: $xs;
             margin-right: $xs;
+        }
+        &-sm {
+            margin-left: $sm;
+            margin-right: $sm;
         }
         &-md {
             margin-left: $md;
@@ -128,6 +144,10 @@
         &-xs {
             margin-top: $xs;
             margin-bottom: $xs;
+        }
+        &-sm {
+            margin-top: $sm;
+            margin-bottom: $sm;
         }
         &-md {
             margin-top: $md;
@@ -154,6 +174,9 @@
         &-xs {
             padding-top: $xs;
         }
+        &-sm {
+            padding-top: $sm;
+        }
         &-md {
             padding-top: $md;
         }
@@ -170,6 +193,9 @@
     &-right {
         &-xs {
             padding-right: $xs;
+        }
+        &-sm {
+            padding-right: $sm;
         }
         &-md {
             padding-right: $md;
@@ -188,6 +214,9 @@
         &-xs {
             padding-bottom: $xs;
         }
+        &-sm {
+            padding-bottom: $sm;
+        }
         &-md {
             padding-bottom: $md;
         }
@@ -204,6 +233,9 @@
     &-left {
         &-xs {
             padding-left: $xs;
+        }
+        &-sm {
+            padding-left: $sm;
         }
         &-md {
             padding-left: $md;
@@ -222,6 +254,10 @@
         &-xs {
             padding-left: $xs;
             padding-right: $xs;
+        }
+        &-sm {
+            padding-left: $sm;
+            padding-right: $sm;
         }
         &-md {
             padding-left: $md;
@@ -244,6 +280,10 @@
         &-xs {
             padding-top: $xs;
             padding-bottom: $xs;
+        }
+        &-sm {
+            padding-top: $sm;
+            padding-bottom: $sm;
         }
         &-md {
             padding-top: $md;

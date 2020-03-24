@@ -8,11 +8,12 @@ import { RouterModule } from '@angular/router';
 import { LandingComponent } from '../landing/containers/landing/landing.component';
 import { OrderModule } from '../order/order.module';
 import { OrderHistoryModule } from '../order-history/order-history.module';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, MainComponent,  LandingComponent],
+  declarations: [HeaderComponent, FooterComponent, MainComponent,  LandingComponent, SidebarComponent],
   imports: [
     CommonModule,
     SharedModule,
