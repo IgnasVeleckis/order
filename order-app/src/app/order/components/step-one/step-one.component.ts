@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {FormGroup} from '@angular/forms';
+import {StepDirection} from "../../models/order.interface";
 
 @Component({
   selector: 'app-step-one',
@@ -7,7 +8,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./step-one.component.scss']
 })
 export class StepOneComponent {
-  @Output() formVal = new EventEmitter<string>()
+  @Input() form: FormGroup;
+  @Output() formVal = new EventEmitter<StepDirection>()
   constructor() { }
   phoneSelectOptions = [
     '+440',
@@ -17,23 +19,12 @@ export class StepOneComponent {
   ]
 
 
-  firstForm = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    phone: new FormControl('', Validators.required)
-  })
-
-  
-  changeValue() {
-    this.formVal.emit('2')  
+  changeValue(step: StepDirection) {
+    this.formVal.emit(step);
   }
 
   firstFormSubmit() {
-    console.log(this.firstForm.value);
-    this.changeValue()
+    console.log(this.form.value);
+    this.changeValue('next');
   }
-
-
-
 }

@@ -40,6 +40,7 @@
 
         <div class="buttons flex justify-center mt-3">
             <button type="submit" [disabled]="!firstForm.valid">NEXT</button>
+            <button type="button" (click)="changeValue('previous')">PREVIOUS</button>
         </div>
     </form>
 

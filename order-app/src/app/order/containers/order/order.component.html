@@ -1,6 +1,6 @@
 <div class="credit flex justify-center">
-    <app-step-one *ngIf="formValue == '1'" (formVal)="change($event)"></app-step-one>
-    <app-step-two *ngIf="formValue == '2'" (formVal)="change($event)"></app-step-two>
-    <app-step-three *ngIf="formValue == '3'" (formVal)="change($event)"></app-step-three>
-    <app-step-four *ngIf="formValue == '4'" (formVal)="change($event)"></app-step-four>
+    <app-step-one *ngIf="step == 1" [formVal]="stepsForms.controls[0]" (stepChange)="changeStep($event)"></app-step-one>
+    <app-step-two *ngIf="step == 2" (stepChange)="changeStep($event)"></app-step-two>
+    <app-step-three *ngIf="step == 3" (stepChange)="changeStep($event)"></app-step-three>
+    <app-step-four *ngIf="step == 4" (stepChange)="changeStep($event)"></app-step-four>
 </div>
