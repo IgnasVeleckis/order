@@ -13,7 +13,13 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, MainComponent,  LandingComponent, SidebarComponent],
+  declarations: [
+    HeaderComponent, 
+    FooterComponent, 
+    MainComponent,  
+    LandingComponent, 
+    SidebarComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,

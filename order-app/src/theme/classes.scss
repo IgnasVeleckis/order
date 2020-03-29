@@ -34,26 +34,6 @@
 
 // Margin
 .m {
-    &-top {
-        &-xs {
-            margin-top: $xs;
-        }
-        &-sm {
-            margin-top: $sm;
-        }
-        &-md {
-            margin-top: $md;
-        }
-        &-lg {
-            margin-top: $lg;
-        }
-        &-xl {
-            margin-top: $xl;
-        }
-        &-auto {
-            margin-top: auto;
-        }
-    }
     &-right {
         &-xs {
             margin-right: $xs;
@@ -94,82 +74,28 @@
             margin-bottom: auto;
         }
     }
-    &-left {
-        &-xs {
-            margin-left: $xs;
-        }
-        &-sm {
-            margin-left: $sm;
-        }
-        &-md {
-            margin-left: $md;
-        }
-        &-lg {
-            margin-left: $lg;
-        }
-        &-xl {
-            margin-left: $xl;
-        }
-        &-auto {
-            margin-left: auto;
-        }
-    }
-    &-x {
-        &-xs {
-            margin-left: $xs;
-            margin-right: $xs;
-        }
-        &-sm {
-            margin-left: $sm;
-            margin-right: $sm;
-        }
-        &-md {
-            margin-left: $md;
-            margin-right: $md;
-        }
-        &-lg {
-            margin-left: $lg;
-            margin-right: $lg;
-        }
-        &-xl {
-            margin-left: $xl;
-            margin-right: $xl;
-        }
-        &-auto {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-    &-y {
-        &-xs {
-            margin-top: $xs;
-            margin-bottom: $xs;
-        }
-        &-sm {
-            margin-top: $sm;
-            margin-bottom: $sm;
-        }
-        &-md {
-            margin-top: $md;
-            margin-bottom: $md;
-        }
-        &-lg {
-            margin-top: $lg;
-            margin-bottom: $lg;
-        }
-        &-xl {
-            margin-top: $xl;
-            margin-bottom: $xl;
-        }
-        &-auto {
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-    }
 }
 
 // Padding
 .p {
+    &-xs {
+        padding: $xs;
+    }
+    &-sm {
+        padding: $sm;
+    }
+    &-md {
+        padding: $md;
+    }
+    &-lg {
+        padding: $lg;
+    }
+    &-xl {
+        padding: $xl;
+    }
+    &-auto {
+        padding: auto;
+    }
     &-top {
         &-xs {
             padding-top: $xs;

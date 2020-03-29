@@ -8,9 +8,15 @@ import { RegistrationComponent } from './containers/registration/registration.co
 
 
 @NgModule({
-  declarations: [LoginFormComponent, RegistrationFormComponent, LoginComponent, RegistrationComponent],
+  declarations: [
+    LoginFormComponent, 
+    RegistrationFormComponent, 
+    LoginComponent, 
+    RegistrationComponent,
+  ],
   imports: [
     CommonModule
+    
   ]
 })
 export class AuthModule { }
